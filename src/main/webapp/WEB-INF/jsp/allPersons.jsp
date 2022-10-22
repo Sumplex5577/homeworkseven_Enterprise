@@ -7,7 +7,7 @@
     <title>Person List</title>
 </head>
 <body>
-<a href="${pageContext.request.contextPath}/persons">&#8592 Back</a>
+<a href="${pageContext.request.contextPath}/main">&#8592 Main Page</a>
 <h1 align="center">Persons List</h1>
 
 <div align="center">
@@ -17,6 +17,9 @@
             <th>First Name</th>
             <th>Last Name</th>
             <th>Phone Number</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Remove</th>
         </tr>
         <c:forEach  items="${all}" var ="person">
             <tr>
@@ -24,16 +27,15 @@
                 <td>${person.firstName}</td>
                 <td>${person.lastName}</td>
                 <td>${person.phoneNumber}</td>
+                <td>${person.username}</td>
+                <td>${person.password}</td>
+                <td><button><a href="${pageContext.request.contextPath}/remove_person?id=${person.id}">&#10060;</a></button></td>
             </tr>
         </c:forEach>
     </table>
 </div>
 <h2>Options:</h2>
-<a href="${pageContext.request.contextPath}/persons/add_person">Add new person</a><br>
-<a href="${pageContext.request.contextPath}/persons/remove_person">Remove person</a><br>
-<a href="${pageContext.request.contextPath}/persons/update_first_name">Update first name</a><br>
-<a href="${pageContext.request.contextPath}/persons/update_last_name">Update last name</a><br>
-<a href="${pageContext.request.contextPath}/persons/update_phone_number">Update phone number</a><br>
+<a href="${pageContext.request.contextPath}/add_person">Add new person</a><br>
 </body>
 
 </html>

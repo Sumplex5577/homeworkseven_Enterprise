@@ -20,6 +20,7 @@
     <span>Price:</span><span>${product.price}</span><br/>
 </div>
 <br>
-<a href="${pageContext.request.contextPath}/products/all_products">Back to all products</a>
+<a href="${pageContext.request.contextPath}/add_product">Add product</a><br>
+<a href="${pageContext.request.contextPath}/all_products">Back to all products</a>
 </body>
 </html>

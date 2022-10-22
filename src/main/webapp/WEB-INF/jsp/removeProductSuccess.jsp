@@ -18,6 +18,6 @@
     <h2>Product is deleted!</h2>
 </div>
 <br>
-<a href="${pageContext.request.contextPath}/products/all_products">Back to all products</a>
+<a href="${pageContext.request.contextPath}/all_products">Back to all products</a>
 </body>
 </html>

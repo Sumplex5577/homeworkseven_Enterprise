@@ -7,7 +7,7 @@
     <title>Products List</title>
 </head>
 <body>
-<a href="${pageContext.request.contextPath}/products">&#8592 Back</a>
+<a href="${pageContext.request.contextPath}/main">&#8592 Main Page</a>
 <h1 align="center">Products List</h1>
 
 <div align="center">
@@ -28,11 +28,6 @@
         </c:forEach>
     </table>
 </div>
-<h2>Options:</h2>
-<a href="${pageContext.request.contextPath}/products/add_product">Add new product</a><br>
-<a href="${pageContext.request.contextPath}/products/remove_product">Remove product</a><br>
-<a href="${pageContext.request.contextPath}/products/update_name">Update name</a><br>
-<a href="${pageContext.request.contextPath}/products/update_price">Update price</a><br>
 </body>
 
 </html>

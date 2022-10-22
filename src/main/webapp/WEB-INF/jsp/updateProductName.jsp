@@ -1,37 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="ISO-8859-1">
-    <title>Product Updating Form</title>
+    <title>Updating Success</title>
     <style type="text/css">
-        label {
+        span {
             display: inline-block;
             width: 200px;
-            margin: 5px;
             text-align: left;
-        }
-        input[type=text], input[type=password], select {
-            width: 200px;
-        }
-        button {
-            padding: 10px;
-            margin: 10px;
         }
     </style>
 </head>
 <body>
 <div align="center">
-    <h2>Update Product</h2>
-    <form:form action="update_name" method="put" modelAttribute="product">
-        <form:label path="id">ID:</form:label>
-        <form:input required="required" path="id"/><br/>
-        <form:label path="name">Name:</form:label>
-        <form:input required="required" path="name"/><br/>
-        <form:button>Update</form:button>
-    </form:form>
+    <h2>Product Name is updated!</h2>
+    <span>ID:</span><span>${product.id}</span><br/>
+    <span>Name:</span><span>${product.name}</span><br/>
 </div>
+<br>
+<a href="${pageContext.request.contextPath}/products/all_products">Back to all products</a>
 </body>
 </html>

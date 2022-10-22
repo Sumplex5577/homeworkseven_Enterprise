@@ -16,10 +16,10 @@
 <body>
 <div align="center">
     <h2>Person First Name is updated!</h2>
-    <span>ID:</span><span>${person.id}</span><br/>
+    <span>Username:</span><span>${pageContext.request.userPrincipal.name}</span><br/>
     <span>First Name:</span><span>${person.firstName}</span><br/>
 </div>
 <br>
-<a href="${pageContext.request.contextPath}/persons/all_persons">Back to all persons</a>
+<a href="${pageContext.request.contextPath}/main">Back to main page</a>
 </body>
 </html>

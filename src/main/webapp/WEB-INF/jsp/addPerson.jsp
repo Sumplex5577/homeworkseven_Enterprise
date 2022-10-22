@@ -28,16 +28,16 @@
     <form:form action="add_person" method="post" modelAttribute="person">
         <form:label path="firstName">First Name:</form:label>
         <form:input required="required" path="firstName"/><br/>
-
         <form:label path="lastName">Last Name:</form:label>
         <form:input required="required" path="lastName"/><br/>
-
         <form:label path="phoneNumber">Phone Number:</form:label>
         <form:input required="required" path="phoneNumber"/><br/>
-
+        <form:label path="username">Username:</form:label>
+        <form:input required="required" path="username"/><br/>
+        <form:label path="password">Password:</form:label>
+        <form:input required="required" path="password"/><br/>
         <form:button>Register</form:button>
     </form:form>
-
 </div>
 </body>
 </html>

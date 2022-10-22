@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1" %>
 <!DOCTYPE html>
@@ -35,24 +36,28 @@
             <th>${cart.person.phoneNumber}</th>
         </tr>
     </table>
-    <span>Products:</span><table border="1">
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Shop ID</th>
-    </tr>
-    <c:forEach items="${cart.products}" var="item">
+    <span>Products:</span>
+    <table border="1">
         <tr>
-            <td><c:out value="${item.id}"/></td>
-            <td><c:out value="${item.name}"/></td>
-            <td><c:out value="${item.price}"/></td>
-            <td><c:out value="${item.shop.getId()}"/></td>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Shop ID</th>
+            <th>Remove</th>
         </tr>
-    </c:forEach>
-</table>
+        <c:forEach items="${cart.products}" var="item">
+            <tr>
+                <td><c:out value="${item.id}"/></td>
+                <td><c:out value="${item.name}"/></td>
+                <td><c:out value="${item.price}"/></td>
+                <td><c:out value="${item.shop.getId()}"/></td>
+                <td><button><a href="${pageContext.request.contextPath}/remove_from_cart?cartId=${cart.id}&productId=${item.id}">&#10060;</a></button></td>
+            </tr>
+        </c:forEach>
+    </table>
 </div>
 <br>
-<a href="${pageContext.request.contextPath}/carts/all_carts">Back to all carts</a>
+<a href="${pageContext.request.contextPath}/add_to_cart">Add product</a><br>
+<a href="${pageContext.request.contextPath}/person_carts">My carts</a>
 </body>
 </html>

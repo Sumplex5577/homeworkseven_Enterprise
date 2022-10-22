@@ -43,7 +43,7 @@
 
 <div align="center">
     <h2>Available shops:</h2>
-    <a href="${pageContext.request.contextPath}/shops/all_shops">All shops</a><br>
+    <a href="${pageContext.request.contextPath}/all_shops">All shops</a><br>
 
 </div>
 </body>

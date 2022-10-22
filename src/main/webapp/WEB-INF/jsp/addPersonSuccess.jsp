@@ -21,6 +21,6 @@
     <span>Phone Number:</span><span>${person.phoneNumber}</span><br/>
 </div>
 <br>
-<a href="${pageContext.request.contextPath}/persons/all_persons">Back to all persons</a>
+<a href="${pageContext.request.contextPath}/main">Main Page</a>
 </body>
 </html>

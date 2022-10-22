@@ -26,8 +26,6 @@
 <div align="center">
     <h2>Update Person</h2>
     <form:form action="update_phone_number" method="put" modelAttribute="person">
-        <form:label path="id">ID:</form:label>
-        <form:input required="required" path="id"/><br/>
         <form:label path="phoneNumber">Phone Number:</form:label>
         <form:input required="required" path="phoneNumber"/><br/>
         <form:button>Update</form:button>

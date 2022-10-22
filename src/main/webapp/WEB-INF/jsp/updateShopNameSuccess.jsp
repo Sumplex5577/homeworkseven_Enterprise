@@ -20,6 +20,6 @@
     <span>Name:</span><span>${shop.name}</span><br/>
 </div>
 <br>
-<a href="${pageContext.request.contextPath}/shops/all_shops">Back to all shops</a>
+<a href="${pageContext.request.contextPath}/all_shops">Back to all shops</a>
 </body>
 </html>
